@@ -1,0 +1,51 @@
+
+    <!DOCTYPE html>
+    <html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Martedì - 22/07 – In viaggio verso Gedda</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" type="image/png" href="static/icon.png">
+        <meta name="theme-color" content="#0f4c81">
+    </head>
+    <body class="bg-gray-100 font-sans p-4">
+        <a href="index.html" class="text-blue-500 underline mb-4 block">← Torna all'indice</a>
+        <h1 class="text-2xl font-bold text-blue-700 mb-2">Martedì - 22/07 – In viaggio verso Gedda</h1>
+        <h2 class="text-lg text-gray-600 mb-4">Arabia Saudita (Gedda)🇲🇴</h2>
+    <img src='static/jedda.jpg' class='rounded-2xl shadow mb-6 w-full max-w-3xl mx-auto'><div class='bg-white p-4 mb-3 rounded-xl shadow'><p class='text-sm font-bold text-gray-700'>🚂 Spostamenti</p><p class='text-base font-semibold text-gray-800 mt-1'>Treno per Milano</p><p class='text-sm mb-1'>NA-MI (Italo) 14:35–19:15 – N.Treno 9950</p></div><div class='bg-white p-4 mb-3 rounded-xl shadow'><p class='text-sm font-bold text-gray-700'>🛏️ Pernottamenti</p><p class='text-base font-semibold text-gray-800 mt-1'>H0 - Check-in hotel - ore 14:00 - 00:30 (1 notte 22/23)</p><p class='text-sm mb-1'>B&B Music - COLAZIONE INCLUSA</p><a href='https://www.booking.com/hotel/it/b-milano.it.html?aid=318615&label=New_English_EN_IT_26745747385-mY8Q8To9xAXnCVG_%2AibqjgS217290659413%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-134679269545%3Alp9205569%3Ali%3Adec%3Adm&sid=28b57a505dd0a56a5a2a224b48292946&all_sr_blocks=34657102_98216758_0_1_0&checkin=2025-07-27&checkout=2025-07-28&dest_id=-121726&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=34657102_98216758_0_1_0&hpos=1&matching_block_id=34657102_98216758_0_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=34657102_98216758_0_1_0__5960&srepoch=1752494863&srpvid=1b14045bf80f63214671634a7d535f86&type=total&ucfs=1&' class='text-blue-500 underline text-sm'>Link utile</a><br></div><div class='bg-white p-4 mb-3 rounded-xl shadow'><p class='text-sm font-bold text-gray-700'>Extra</p><p class='text-base font-semibold text-gray-800 mt-1'>📍Posizione hotel</p><p class='text-sm mb-1'>Visualizza su Google Maps</p><a href='https://maps.app.goo.gl/97pkAJrf5aD3YUWT7?g_st=com.google.maps.preview.copy' class='text-blue-500 underline text-sm'>Link utile</a><br></div>
+    <div class='bg-pink-50 border border-pink-200 p-4 rounded-xl shadow mt-10'>
+        <h3 class='text-lg font-semibold text-pink-800 mb-1'>📸 Album fotografico del viaggio</h3>
+        <p class='text-sm mb-2'>Guarda o carica le foto del viaggio qui sotto:</p>
+        <a href="https://photos.google.com/share/AF1QipPip3bOnx8bNPVfWOa4WSU3Tb5oTgUc5uNFc1iA5elgXvqkeXDjkzER9Yd3RF8qCg" target="_blank" class="text-pink-600 underline font-medium">
+            Vai all'album su Google Foto
+        </a>
+    </div>
+    <div class='mt-10 flex justify-between'><div></div><a href='mercoledì---2307--in-viaggio-verso-gedda.html' class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'>Giorno successivo →</a></div>
+    <div class="mt-10">
+        <h3 class="text-lg font-semibold mb-2">⭐ Voto alla giornata</h3>
+        <div id="stars" class="flex gap-2 text-3xl cursor-pointer select-none"></div>
+    </div>
+
+    <script>
+        const key = "voto_" + window.location.pathname;
+        const starsEl = document.getElementById("stars");
+
+        function renderStars(rating) {
+            starsEl.innerHTML = "";
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement("span");
+                star.textContent = i <= rating ? "★" : "☆";
+                star.style.color = "#fbbf24";
+                star.onclick = () => {
+                    localStorage.setItem(key, i);
+                    renderStars(i);
+                };
+                starsEl.appendChild(star);
+            }
+        }
+
+        renderStars(parseInt(localStorage.getItem(key)) || 0);
+    </script>
+    </body></html>

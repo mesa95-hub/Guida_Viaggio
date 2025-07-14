@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venerdi - 25/07 – Scoperta di Gedda</title>
+    <link href="static/tailwind.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="static/icon.png">
+    <meta name="theme-color" content="#0f4c81">
+</head>
+<body class="bg-gray-100 font-sans p-4">
+<a href="index.html" class="text-blue-500 underline mb-4 block">← Torna all'indice</a>
+<h1 class="text-2xl font-bold text-blue-700 mb-2">Venerdi - 25/07 – Scoperta di Gedda</h1>
+<h2 class="text-lg text-gray-600 mb-4">Arabia Saudita (Gedda)🇲🇴</h2>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function() {
+        console.log('✅ Service worker registrato');
+      })
+      .catch(function(error) {
+        console.log('❌ Errore service worker:', error);
+      });
+  }
+</script>
+<img src='static/jedda.jpg' class='rounded-2xl shadow mb-6 w-full max-w-3xl mx-auto'><div class='bg-white p-4 mb-3 rounded-xl shadow'><p class='text-sm font-bold text-gray-700'>📸 Attività</p><p class='text-base font-semibold text-gray-800 mt-1'>Visite libere</p><p class='text-sm mb-1'>🇲🇴🏝️</p></div>
+<div class='bg-pink-50 border border-pink-200 p-4 rounded-xl shadow mt-10'>
+    <h3 class='text-lg font-semibold text-pink-800 mb-1'>📸 Album fotografico del viaggio</h3>
+    <p class='text-sm mb-2'>Guarda o carica le foto del viaggio qui sotto:</p>
+    <a href="https://photos.google.com/share/AF1QipPip3bOnx8bNPVfWOa4WSU3Tb5oTgUc5uNFc1iA5elgXvqkeXDjkzER9Yd3RF8qCg" target="_blank" class="text-pink-600 underline font-medium">
+        Vai all'album su Google Foto
+    </a>
+</div>
+<div class='mt-10 flex justify-between'><a href='giovedi---2407--scoperta-di-gedda.html' class='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full'>← Giorno precedente</a><a href='sabato---2607--direzione-jakarta.html' class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'>Giorno successivo →</a></div>
+<div class="mt-10">
+    <h3 class="text-lg font-semibold mb-2">⭐ Voto alla giornata</h3>
+    <div id="stars" class="flex gap-2 text-3xl cursor-pointer select-none"></div>
+</div>
+
+<script>
+    const key = "voto_" + window.location.pathname;
+    const starsEl = document.getElementById("stars");
+
+    function renderStars(rating) {
+        starsEl.innerHTML = "";
+        for (let i = 1; i <= 5; i++) {
+            const star = document.createElement("span");
+            star.textContent = i <= rating ? "★" : "☆";
+            star.style.color = "#fbbf24";
+            star.onclick = () => {
+                localStorage.setItem(key, i);
+                renderStars(i);
+            };
+            starsEl.appendChild(star);
+        }
+    }
+
+    renderStars(parseInt(localStorage.getItem(key)) || 0);
+</script>
+</body></html>
