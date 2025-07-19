@@ -24,7 +24,7 @@ const filesToCache = [
   "sabato-208--banyuwangi---pemuteran.html",
   "domenica-lunedi-martedi---3-508--pemuteran.html",
   "mercoledi-608--pemuteran---ubud.html",
-  "giovedii---708--ubud.html",
+  "giovedi---708--ubud.html",
   "venerdi---808--ubud.html",
   "sabato---908--ubud.html",
   "domenica---1008--ubud---komodo.html",
