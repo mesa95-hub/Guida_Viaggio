@@ -7,7 +7,21 @@ const filesToCache = [
   "service-worker.js",
   "static/tailwind.min.css",
   "static/icon.png",
-  "static/noi.jpg", // se hai aggiunto una foto personale
+  "static/noi.jpg", 
+  "static/borobodur.jpg",
+  "static/jedda.jpg",
+  "static/komodo.jpg",
+  "static/mappaprambanan.png",
+  "static/montebromo.jpg",
+  "static/padangbai.jpg",
+  "static/pemuteran.jpg",
+  "static/prambanan.jpg",
+  "static/transfer.jpeg",
+  "static/ubud.jpg",
+  "static/volo.jpg",
+  "static/vulcani.jpg",
+  "static/vulcanoblu.jpg",
+  "static/yogyakarta.jpg",
 
   // Tutte le tue pagine giorno per giorno:
   "martedi---2207--napoli---milano.html",
