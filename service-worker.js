@@ -10,7 +10,7 @@ const filesToCache = [
   "static/noi.jpg", // se hai aggiunto una foto personale
 
   // Tutte le tue pagine giorno per giorno:
-  "martedi---2207--napoli---milano..html",
+  "martedi---2207--napoli---milano.html",
   "mercoledi--2307--milano--gedda.html",
   "giovedi---2407--scoperta-di-gedda.html",
   "venerdi---2507--scoperta-di-gedda.html",
